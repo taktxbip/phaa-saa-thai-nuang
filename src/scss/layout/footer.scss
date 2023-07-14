@@ -1,0 +1,10 @@
+.main-footer {
+  width: 100vw;
+  height: 50vh;
+  display: flex;
+
+  &-content {
+    margin: auto;
+    text-align: center;
+  }
+}

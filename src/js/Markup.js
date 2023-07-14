@@ -2,7 +2,7 @@ class Markup {
   constructor(photos) {
     this.photos = photos;
     this.clusters = {};
-
+    this.base = 'https://phaa-saa-thai-nuang.s3.eu-central-1.amazonaws.com/';
     this.prepare();
 
   }
@@ -69,7 +69,7 @@ class Markup {
   }
 
   getPath(name) {
-    return `images/${name}.jpg`;
+    return `${this.base}${name}.jpg`;
   }
 
   getDate(photoName) {
