@@ -3,6 +3,10 @@
   height: 50vh;
   display: flex;
 
+  @media screen and (max-width:568px) {
+    height: 200px;
+  }
+
   &-content {
     margin: auto;
     text-align: center;

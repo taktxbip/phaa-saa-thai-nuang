@@ -10,19 +10,33 @@ h6 {
 
 .h1,
 h1 {
-  font: 900 normal rem(100px) / 1.2 var(--font-p);
+  font: 900 normal rem(200px) / 1.2 var(--font-p);
+  color: #333;
+
+  @media screen and (max-width:1024px) {
+    font-size: rem(100px);
+  }
+
+  @media screen and (max-width:568px) {
+    font-size: rem(60px);
+  }
+}
+
+.h1 {
+  font-size: rem(100px);
+
+  @media screen and (max-width:568px) {
+    font-size: rem(60px);
+  }
 }
 
 h2 {
   font: 400 normal rem(24px) / 1.2 var(--font-p);
   margin: 20px 0;
+  text-align: center;
 
-  +p {
-    margin-top: 7px;
-  }
-
-  a {
-    font: inherit;
+  @media screen and (max-width:568px) {
+    font-size: rem(16px);
   }
 }
 

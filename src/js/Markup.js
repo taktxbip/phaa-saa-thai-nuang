@@ -46,7 +46,7 @@ class Markup {
     const date = new Date(timestamp);
     const dateString = date.toLocaleString('en-GB', {
       timeZone: 'UTC',
-      month: 'long',
+      month: 'short',
       day: 'numeric'
     });
 

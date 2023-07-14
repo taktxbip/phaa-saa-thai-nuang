@@ -1,11 +1,19 @@
 .hero {
   width: 100vw;
-  height: 100vh;
+  height: 60vh;
   display: flex;
+
+  @media screen and (max-width:568px) {
+    height: 200px;
+  }
 
   &-content {
     margin: auto;
     text-align: center;
+  }
+
+  .subtitle {
+    font-size: rem(18px);
   }
 }
 
@@ -13,13 +21,14 @@
   position: fixed;
   top: 0;
   bottom: 0;
+  // right: 0;
   left: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
 
   ul {
-    padding: 20px 20px;
+    padding: 15px;
     margin: 0;
     background-color: #fff;
     list-style: none;
@@ -27,10 +36,10 @@
     li {
       a {
         color: #333;
-        // text-transform: uppercase;
-        padding: 5px 0;
+        padding: 1px 0;
         display: block;
-        font-size: rem(13px);
+        font-size: rem(10px);
+        text-transform: uppercase;
         text-decoration: none;
         font-weight: 500;
 
