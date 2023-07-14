@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>ภาษาไทย</title>
+</head>
+
+<body>
+  <%= _.template(require('./../includes/svg.html').default)() %>
+
+    <%= _.template(require('./../includes/header.html').default)() %>
+
+      <nav id="navigation">
+        <ul>
+          <li class="active"><a href="#2023-02-12">June 12</a></li>
+          <li><a href="#2023-02-14">June 14</a></li>
+        </ul>
+      </nav>
+
+      <div id="main">
+
+        <div class="container">
+
+          <section id="gallery" class="gallery">
+
+            <div class="gallery-item" id="2023-02-12">
+              <h2>June 12</h2>
+              <img src="images/2023-02-12_1.jpg" loading="lazy">
+            </div>
+
+            <div class="gallery-item" id="2023-02-14">
+              <h2>June 14</h2>
+              <img src="images/2023-02-14_1.jpg" loading="lazy">
+              <img src="images/2023-02-14_2.jpg" loading="lazy">
+            </div>
+
+          </section>
+
+        </div>
+
+        <%= _.template(require('./../includes/footer.html').default)() %>
+
+      </div>
+</body>
+
+</html>
