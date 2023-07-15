@@ -16,7 +16,7 @@ class Markup {
     let html = '<ul>';
 
     for (const date in this.clusters) {
-      html += `<li><a href="#${date}">${this.getHumanDate(date)}</a></li>`;
+      html += `<li><a href="#${date}">${this.getHumanDate(date, 'short')}</a></li>`;
     }
     html += '</ul>';
 
@@ -40,13 +40,13 @@ class Markup {
     gallery.html(html);
   }
 
-  getHumanDate(stroke) {
+  getHumanDate(stroke, month = 'long') {
     const timestamp = Date.parse(stroke);
 
     const date = new Date(timestamp);
     const dateString = date.toLocaleString('en-GB', {
       timeZone: 'UTC',
-      month: 'short',
+      month,
       day: 'numeric'
     });
 
